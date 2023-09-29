@@ -1,0 +1,42 @@
+app:
+  baseUrl: "http://localhost:7007"
+  title: Backstage App
+organization:
+  name: Xyz Company
+integrations:
+  github:
+    - host: github.com
+      token: ${GITHUB_TOKEN}
+backend:
+  auth:
+    keys:
+      - secret: ${BACKEND_SECRET} # Execute in the terminal node -p 'require("crypto").randomBytes(24).toString("base64")'
+  baseUrl: "http://localhost:7007"
+  listen:
+    port: ":7007"
+  csp:
+    connect-src: ["'self'", "http:", "https:"]
+  cors:
+    origin: "http://localhost:7007"
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+  database:
+    client: better-sqlite3
+    connection: ":memory:"
+techdocs:
+  builder: "local" # Alternatives - 'external'
+  generator:
+    runIn: "docker" # Alternatives - 'local'
+  publisher:
+    type: "local" # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, Group, Resource, Location, Template, API]
+  locations:
+    - type: url
+      target: "https://github.com/janus-idp/software-templates/blob/main/showcase-templates.yaml"
+    - type: url
+      target: "https://github.com/backstage/backstage/blob/master/plugins/scaffolder-backend/sample-templates/remote-templates.yaml"
