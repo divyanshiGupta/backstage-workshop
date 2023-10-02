@@ -68,7 +68,7 @@
 
 ### Enabling TechDocs ([Backstage TechDocs configuration guide](https://backstage.io/docs/features/techdocs/getting-started))
 
-1. Include the following lines right above USER node of your Dockerfile:
+1. Include the following lines right above `USER node` of your `Dockerfile`:
 
    ```
    # /packages/backend/Dockerfile
