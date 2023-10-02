@@ -51,7 +51,7 @@
 
     2.4. Enter `This is a react application` in the Description field
 
-    2.5. Enter your name in the `owner` field
+    2.5. Now in choose a location section, enter your github user id in the `owner` field
 
     2.6. Enter `react-app` in the `Repository` field
 
@@ -62,7 +62,7 @@
           locations:
             ...
             - type: url
-              target: https://github.com/debsmita1/react-app/blob/master/catalog-info.yaml # Replace this with your entity file URL
+              target: https://github.com/divyanshiGupta/react-app/blob/master/catalog-info.yaml # Replace this with your entity file URL
               rules:
                 - allow: [Component]
 
