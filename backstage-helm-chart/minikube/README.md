@@ -54,7 +54,7 @@
 
     Note: Every time you update the `ConfigMap` or the `Secret` resource after the Helm Chart is deployed, you need to restart the associated `Deployment` resource
 
-7.  Create `values.yaml` file to pass the `Secret` and `ConfigMap` reference to the `Backstage` instance. Copy the contents of the `values.yaml` file in this branch
+7.  Create `values.yaml` file to pass the `Secret` and `ConfigMap` reference to the `Backstage` instance. Copy the contents of the `values.yaml` file in this folder
 
 8.  Run the following command to install the helm chart
 
