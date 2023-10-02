@@ -18,7 +18,7 @@
    workflow
    ```
 
-3. Add the following snippet in the `app-config.local.yaml` file
+3. Add the following snippet in the `app-config.yaml` file
 
    ```
    integrations:
