@@ -27,10 +27,10 @@
 
 ### Integrate the plugin in the Backstage backend
 
-1. Copy the plugin name in the newly created backend plugin's package.json
+1. Run the following command from your Backstage root directory
 
    ```
-   yarn workspace backend add @internal/plugin-test-backend^0.1.0
+   yarn add --cwd packages/backend @internal/plugin-carmen-backend@^0.1.0
    ```
 
 2. Create a new file named `packages/backend/src/plugins/test.ts`, and add the following to it
@@ -43,6 +43,11 @@
    export default async function createPlugin(
      env: PluginEnvironment
    ): Promise<Router> {
+   // Here is where you will add all of the required initialization code that
+   // your backend plugin needs to be able to start!
+   
+   // The env contains a lot of goodies, but our router currently only
+   // needs a logger
      return await createRouter({
        logger: env.logger,
      });
