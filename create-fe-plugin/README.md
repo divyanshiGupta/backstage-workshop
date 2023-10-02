@@ -29,7 +29,7 @@
    // packages/app/src/components/catalog/EntityPage.tsx
    import { MyFrontendPluginPage } from "@internal/plugin-my-frontend-plugin";
 
-   const serviceEntityPage = (
+   const websiteEntityPage = (
      <EntityPageLayout>
        ...
        <EntityLayout.Route path="/my-plugin" title="My FE Plugin">
