@@ -10,21 +10,15 @@
 
 2. Select the following and generate the token.
 
-```
-read:org
-read:user
-user:email
-repo
-workflow
-```
-
-3. Export your GitHub token
-
    ```
-   export GITHUB_TOKEN=<your-github-token>
+   read:org
+   read:user
+   user:email
+   repo
+   workflow
    ```
 
-4. Add the following snippet in the `app-config.local.yaml` file
+3. Add the following snippet in the `app-config.local.yaml` file
 
    ```
    integrations:
