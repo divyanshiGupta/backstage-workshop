@@ -20,12 +20,13 @@
    or
 
    ```
-   yarn workspace @backstage/plugin-my-frontend-plugin start # From the root directory
+   yarn workspace @internal/plugin-my-frontend-plugin start # From the root directory
    ```
 
 4. Embed your Plugin in the Entities page
 
    ```tsx title="packages/app/src/components/catalog/EntityPage.tsx"
+   // packages/app/src/components/catalog/EntityPage.tsx
    import { MyFrontendPluginPage } from "@internal/plugin-my-frontend-plugin";
 
    const serviceEntityPage = (
@@ -43,13 +44,14 @@
 
 1.  Use Backstage's [proxy](https://backstage.io/docs/plugins/proxying) service to use the [GitHub API](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api) ([Guide to use Backstage Proxy](https://backstage.io/docs/tutorials/using-backstage-proxy-within-plugin/))
 
-    1.1 Set-up the Backstage Proxy
-
+    1.1 Set-up the Backstage Proxy in `app-config.yaml` file
+  
         proxy:
           ...
           '/github':
           target: 'https://api.github.com'
           headers:
             Authorization: 'token ${GITHUB_TOKEN}'
+ 
 
     1.2 Update the `ExampleFetchComponent` to use the `GitHub API`. Replace the contents of the `ExampleFetchComponent.tsx` file with the `ExampleFetchComponent.tsx` file in this folder
