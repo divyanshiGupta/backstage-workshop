@@ -30,7 +30,7 @@
 1. Run the following command from your Backstage root directory
 
    ```
-   yarn add --cwd packages/backend @internal/plugin-carmen-backend@^0.1.0
+   yarn add --cwd packages/backend @internal/plugin-test-backend@^0.1.0
    ```
 
 2. Create a new file named `packages/backend/src/plugins/test.ts`, and add the following to it
