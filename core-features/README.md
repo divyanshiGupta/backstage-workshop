@@ -68,10 +68,17 @@
 
 ### Enabling TechDocs ([Backstage TechDocs configuration guide](https://backstage.io/docs/features/techdocs/getting-started))
 
-1. Run the following command to install `mkdocs-techdocs-core` package
+1. Include the following lines right above USER node of your Dockerfile:
 
    ```
-   pip3 install mkdocs-techdocs-core
+   # /packages/backend/Dockerfile
+   RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
+
+   ENV VIRTUAL_ENV=/opt/venv
+   RUN python3 -m venv $VIRTUAL_ENV
+   ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+   
+   RUN pip3 install mkdocs-techdocs-core
    ```
 
 2. Make the following change in the `app-config.yaml` and restart the app
@@ -80,7 +87,7 @@
    techdocs:
      builder: "local" # Alternatives - 'external'
      generator:
-       runIn: "local" # Alternatives - 'local'
+       runIn: "docker" # Alternatives - 'local'
      publisher:
        type: "local" # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
    ```
