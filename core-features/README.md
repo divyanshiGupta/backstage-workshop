@@ -119,7 +119,7 @@
 3. Create the Sign-In Page. Make the following changes in the `App.tsx` file
 
    ```tsx title=packages/app/src/App.tsx
-
+     // packages/app/src/App.tsx
      import { githubAuthApiRef } from '@backstage/core-plugin-api';
      import { SignInPage } from '@backstage/core-components';
 
