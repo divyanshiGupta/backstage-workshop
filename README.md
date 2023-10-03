@@ -14,7 +14,7 @@
 
 ### Prerequisites for this workshop
 
-- Node.js version >=18.12.0 (https://nodejs.org/en/blog/release/v18.17.1) :
+- Node.js version >=18.12.0 (https://nodejs.org/en/blog/release/v18.18.0) :
 
   - Using nvm (recommended)
 
@@ -23,10 +23,6 @@
 
       ```
       nvm install 18
-      ```
-
-      ```
-      nvm use 18.17.1
       ```
 
 - [yarn](https://classic.yarnpkg.com/en/docs/install)
