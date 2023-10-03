@@ -49,9 +49,9 @@
         proxy:
           ...
           '/github':
-          target: 'https://api.github.com'
-          headers:
-            Authorization: 'token ${GITHUB_TOKEN}'
- 
+             target: 'https://api.github.com'
+             headers:
+               Authorization: 'token ${GITHUB_TOKEN}'
+    
 
     1.2 Update the `ExampleFetchComponent` to use the `GitHub API`. Replace the contents of the `ExampleFetchComponent.tsx` file with the `ExampleFetchComponent.tsx` file in this folder
